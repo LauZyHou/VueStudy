@@ -1,13 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '../components/HelloWorld'
-import Filter from '../page/xiaoma/filter'
-import Watch from '../page/xiaoma/watch'
-import computed_set from '../page/xiaoma/computed_set'
-import bind_class from '../page/xiaoma/bind_class'
-import bind_form from '../page/xiaoma/bind_form'
-import form_xsf from '../page/xiaoma/form_xsf'
-import slot_insert from '../page/xiaoma/slot_insert'
+
+import Header from '../page/xiaoma/Header'
+import SideBar from '../page/xiaoma/SideBar'
+import Detail from '../page/xiaoma/Detail'
 
 Vue.use(Router);
 
@@ -15,12 +11,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      // name: 'HelloWorld',
-      // component: HelloWorld
-      // component: Filter
-      // component: computed_set
-      // component: form_xsf
-      component: slot_insert
+      name: 'Hello',
+      //这里改用components,指定多个要使用的组件
+      components: {
+        myHeader: Header,
+        mySideBar: SideBar,
+        myDetail: Detail
+      }
     }
   ]
 })
