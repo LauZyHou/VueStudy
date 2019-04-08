@@ -1,4 +1,4 @@
-### 集成axios
+### 集成Axios
 ```bash
 npm install -S -E axios vue-axios
 ```

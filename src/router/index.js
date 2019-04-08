@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Header from '../page/xiaoma/Header'
 import SideBar from '../page/xiaoma/SideBar'
 import Detail from '../page/xiaoma/Detail'
+import Echarts from '../page/echarts/Echarts'
 
 Vue.use(Router);
 
@@ -17,6 +18,15 @@ export default new Router({
         myHeader: Header,
         mySideBar: SideBar,
         myDetail: Detail
+      }
+    },
+    {
+      path: '/ec',
+      name: 'Echarts',
+      components:{
+        myHeader: Header,
+        mySideBar: SideBar,
+        myDetail: Echarts
       }
     }
   ]
